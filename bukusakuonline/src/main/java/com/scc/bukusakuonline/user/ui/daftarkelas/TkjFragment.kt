@@ -13,6 +13,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.faltenreich.skeletonlayout.Skeleton
+import com.faltenreich.skeletonlayout.applySkeleton
 import com.scc.bukusakuonline.user.R
 import com.scc.bukusakuonline.user.adapter.AdapterSiswa
 import java.util.ArrayList
@@ -28,12 +30,18 @@ class TkjFragment : Fragment(), AdapterView.OnItemSelectedListener {
     lateinit var rv_rpl : RecyclerView
     lateinit var adapter: ArrayAdapter<String>
     lateinit var spinner: Spinner
+    lateinit var skeletonScreen: Skeleton
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? { // Inflate the layout for this fragment
         val v = inflater.inflate(R.layout.fragment_tkj, container, false)
         spinner = v.findViewById(R.id.spinner_tkj)
         rv_rpl= v.findViewById(R.id.rv_tkj)
         rv_rpl.layoutManager= LinearLayoutManager(context)
+        siswaAdapter = context?.let { AdapterSiswa(it) }!!
+        rv_rpl.adapter = siswaAdapter
+        skeletonScreen= rv_rpl.applySkeleton(R.layout.item_siswa,5)
+        skeletonScreen.showSkeleton()
         init()
 
         return v
@@ -63,10 +71,10 @@ class TkjFragment : Fragment(), AdapterView.OnItemSelectedListener {
         siswaViewModel = ViewModelProviders.of(this).get(SiswaViewModel::class.java)
         context?.let { siswaViewModel.loadData(it,p0?.getItemAtPosition(p2).toString()) }
         siswaViewModel.listData.observe(this, Observer {
-            Log.d("it", it.toString())
-            siswaAdapter = context?.let { it1 -> AdapterSiswa(it1,it) }!!
+            siswaAdapter.setId(it)
             rv_rpl.adapter = siswaAdapter
             siswaAdapter.notifyDataSetChanged()
+            skeletonScreen.showOriginal()
         })
     }
 

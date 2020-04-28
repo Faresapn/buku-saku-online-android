@@ -19,6 +19,9 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ethanhua.skeleton.SkeletonScreen;
+import com.faltenreich.skeletonlayout.Skeleton;
+import com.faltenreich.skeletonlayout.SkeletonLayoutUtils;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.scc.bukusakuonline.user.R;
@@ -39,12 +42,14 @@ public class HomeFragment extends Fragment {
     private CollapsingToolbarLayout collapsingToolbarLayout;
     private AppBarLayout appBarLayout;
     @BindView(R.id.rv_aktivitas_new) RecyclerView mRecyclerView;
-    ;
+    Skeleton skeletonScreen;
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this,root);
         CardView menu_peraturan = root.findViewById(R.id.menu_peraturan);
         CardView menu_daftar_kelas = root.findViewById(R.id.menu_daftar_kelas);
+        skeletonScreen = SkeletonLayoutUtils.applySkeleton(mRecyclerView, R.layout.item_aktivitas_new, 5);
+        skeletonScreen.showSkeleton();
         SearchView searchView = root.findViewById(R.id.sercing);
         CardView menu_pelanggaran = root.findViewById(R.id.menu_pelanggaran);
         CardView menu_lainya = root.findViewById(R.id.menu_lainya);
@@ -109,6 +114,7 @@ public class HomeFragment extends Fragment {
             homeViewModel.getListData().observe(getActivity(), dataItems -> {
                 try {
                     if (dataItems != null){
+                        skeletonScreen.showOriginal();
                         mAdapterAktivitasTerbaru = new AdapterAktivitasTerbaru(getContext(),dataItems);
                         mRecyclerView.setAdapter(mAdapterAktivitasTerbaru);
                         mAdapterAktivitasTerbaru.notifyDataSetChanged();

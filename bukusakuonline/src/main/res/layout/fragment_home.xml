@@ -79,82 +79,92 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="15dp">
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/menu_peraturan"
-                    android:layout_height="80dp"
-                    android:layout_width="151dp"
-                    app:cardElevation="0dp"
-                    app:cardCornerRadius="5dp">
-                    <FrameLayout
-                        android:background="@drawable/border"
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/menu_peraturan"
+                        android:layout_height="match_parent"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-                        <LinearLayout
+                        app:cardElevation="0dp"
+                        app:cardCornerRadius="5dp">
+                        <FrameLayout
+                            android:background="@drawable/border"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="10dp"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:scaleType="fitXY"
-                                android:background="@drawable/pasal"/>
-                            <TextView
+                            android:layout_height="match_parent">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:maxWidth="30dp"
                                 android:layout_height="wrap_content"
-                                android:text="Peraturan Dan Pasal"
+                                android:layout_gravity="center"
                                 android:layout_margin="10dp"
-                                android:textSize="12sp"
-                                android:maxLines="2"
-                                android:layout_marginEnd="32dp"
-                                android:layout_marginRight="32dp"
-                                android:textColor="#303030"
-                                android:fontFamily="@font/roboto"/>
-                        </LinearLayout>
-                    </FrameLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-
-                    android:id="@+id/menu_pelanggaran"
-                    android:layout_height="80dp"
-                    android:layout_width="151dp"
-                    app:cardElevation="0dp"
-                    app:cardCornerRadius="5dp"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:scaleType="fitXY"
+                                    android:background="@drawable/pasal"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:maxWidth="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Peraturan Dan Pasal"
+                                    android:layout_margin="10dp"
+                                    android:textSize="12sp"
+                                    android:maxLines="2"
+                                    android:layout_marginEnd="32dp"
+                                    android:layout_marginRight="32dp"
+                                    android:textColor="#303030"
+                                    android:fontFamily="@font/roboto"/>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
                     android:layout_marginStart="18dp"
                     android:layout_marginLeft="18dp"
-                    android:background="@color/colorWhite">
-                    <FrameLayout
-                        android:background="@drawable/border"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/menu_pelanggaran"
+                        android:layout_height="match_parent"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-                        <LinearLayout
+                        app:cardElevation="0dp"
+                        app:cardCornerRadius="5dp"
+                        android:background="@color/colorWhite">
+                        <FrameLayout
+                            android:background="@drawable/border"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="10dp"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:scaleType="fitXY"
-                                android:background="@drawable/pelanggaran"/>
-                            <TextView
+                            android:layout_height="match_parent">
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Daftar Point Pelanggaran"
-                                android:textSize="12sp"
-                                android:maxLines="2"
-                                android:layout_marginStart="10dp"
-                                android:textColor="#303030"
-                                android:fontFamily="@font/roboto"
-                                android:layout_marginLeft="10dp" />
-                        </LinearLayout>
-                    </FrameLayout>
-                </androidx.cardview.widget.CardView>
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:scaleType="fitXY"
+                                    android:background="@drawable/pelanggaran"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Daftar Point Pelanggaran"
+                                    android:textSize="12sp"
+                                    android:maxLines="2"
+                                    android:layout_marginStart="10dp"
+                                    android:textColor="#303030"
+                                    android:fontFamily="@font/roboto"
+                                    android:layout_marginLeft="10dp" />
+                            </LinearLayout>
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -164,87 +174,97 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp">
-                <androidx.cardview.widget.CardView
-
-                    android:id="@+id/menu_daftar_kelas"
-                    android:layout_height="80dp"
-                    android:layout_width="151dp"
-                    app:cardElevation="0dp"
-                    android:layout_marginTop="10dp"
-                    app:cardCornerRadius="5dp">
-                    <FrameLayout
-                        android:background="@drawable/border"
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="80dp">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/menu_daftar_kelas"
+                        android:layout_height="match_parent"
                         android:layout_width="match_parent"
-
-                        android:layout_height="match_parent">
-                        <LinearLayout
+                        app:cardElevation="0dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="5dp">
+                        <FrameLayout
+                            android:background="@drawable/border"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="10dp"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:scaleType="fitXY"
-                                android:background="@drawable/kelas"/>
-                            <TextView
+                            android:layout_height="match_parent">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:maxWidth="30dp"
                                 android:layout_height="wrap_content"
-                                android:text="Lihat Daftar Kelas"
+                                android:layout_gravity="center"
                                 android:layout_margin="10dp"
-                                android:textSize="12sp"
-                                android:maxLines="2"
-                                android:layout_marginEnd="32dp"
-                                android:layout_marginRight="32dp"
-                                android:textColor="#303030"
-                                android:fontFamily="@font/roboto"/>
-                        </LinearLayout>
-                    </FrameLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/menu_lainya"
-                    android:layout_height="80dp"
-                    android:layout_width="151dp"
-                    app:cardElevation="0dp"
-                    android:layout_marginTop="10dp"
-                    app:cardCornerRadius="5dp"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:scaleType="fitXY"
+                                    android:background="@drawable/kelas"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:maxWidth="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lihat Daftar Kelas"
+                                    android:layout_margin="10dp"
+                                    android:textSize="12sp"
+                                    android:maxLines="2"
+                                    android:layout_marginEnd="32dp"
+                                    android:layout_marginRight="32dp"
+                                    android:textColor="#303030"
+                                    android:fontFamily="@font/roboto"/>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
                     android:layout_marginStart="18dp"
                     android:layout_marginLeft="18dp"
-                    android:background="@color/colorWhite">
-                    <FrameLayout
-                        android:background="@drawable/border"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/menu_lainya"
+                        android:layout_height="match_parent"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-                        <LinearLayout
+                        app:cardElevation="0dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="5dp"
+
+                        android:background="@color/colorWhite">
+                        <FrameLayout
+                            android:background="@drawable/border"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="10dp"
-                            android:orientation="horizontal"
-                            android:gravity="center">
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:scaleType="fitXY"
-                                android:background="@drawable/lainnya"/>
-                            <TextView
+                            android:layout_height="match_parent">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:maxWidth="30dp"
                                 android:layout_height="wrap_content"
-                                android:text="Lainnya"
+                                android:layout_gravity="center"
                                 android:layout_margin="10dp"
-                                android:textSize="12sp"
-                                android:maxLines="2"
-                                android:layout_marginEnd="32dp"
-                                android:layout_marginRight="32dp"
-                                android:textColor="#303030"
-                                android:fontFamily="@font/roboto"/>
-                        </LinearLayout>
-                    </FrameLayout>
-                </androidx.cardview.widget.CardView>
+                                android:orientation="horizontal"
+                                android:gravity="center">
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:scaleType="fitXY"
+                                    android:background="@drawable/lainnya"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:maxWidth="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lainnya"
+                                    android:layout_margin="10dp"
+                                    android:textSize="12sp"
+                                    android:maxLines="2"
+                                    android:layout_marginEnd="32dp"
+                                    android:layout_marginRight="32dp"
+                                    android:textColor="#303030"
+                                    android:fontFamily="@font/roboto"/>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"

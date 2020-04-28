@@ -1,6 +1,9 @@
 package com.scc.bukusakuonline.ui;
 
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -12,6 +15,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.scc.bukusakuonline.R;
+import com.scc.bukusakuonline.ui.pengaduan.PengaduanFragment;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -30,5 +34,32 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navigation, navController);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+    }
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        Log.d("request", String.valueOf(requestCode));
+        switch (requestCode) {
+            case 10: {
+                if (grantResults.length > 0) {
+                    StringBuilder permissionsDenied = new StringBuilder();
+                    boolean denied = false;
+                    for (String per : permissions) {
+                        Log.d("grant", String.valueOf(grantResults[0]));
+                        if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+                           permissionsDenied.append("yyy");
+                            denied = true;
+                        }
+
+                    }
+                    Log.d("permission", String.valueOf(permissionsDenied));
+                    if (denied){
+                        Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Log.d("hmm","hmm");
+                        Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        }
     }
 }

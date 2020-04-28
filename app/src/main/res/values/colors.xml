@@ -15,5 +15,7 @@
     <color name="colorbgPeraturan">#F8F8F8</color>
     <color name="colorbgBackgroundHome">#F3F4F7</color>
     <color name="background_point">#F3F4F7</color>
-
+    <color name="text_color">#303030</color>
+    <color name="color_border">#FCFCFC</color>
+    <color name="color_border2">#C4C4C4</color>
 </resources>

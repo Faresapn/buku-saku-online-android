@@ -5,528 +5,564 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorbgPeraturan"
-
     tools:context=".ui.TentangKamiActivity">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="26dp"
-        android:fontFamily="@font/roboto"
-        android:text="Created With Love By"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/sccpwt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:textColor="#06956D"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/contentig"
-        android:text="@string/sccpwt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10">
-
-    </Button>
-
-    <Button
-        android:id="@+id/Stematel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="12dp"
-        android:padding="10dp"
-        android:textColor="#06956D"
-        android:background="@drawable/contentig"
-        android:text="@string/stematelpwt"
-        app:layout_constraintStart_toEndOf="@+id/sccpwt"
-        app:layout_constraintTop_toBottomOf="@+id/textView10">
-
-    </Button>
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/roboto"
-        android:text="Our Team"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sccpwt" />
-
-    <androidx.core.widget.NestedScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@color/colorbgPeraturan"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11">
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/roboto"
+            android:text="Created with love by"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:id="@+id/sccpwt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#06956D"
+            android:layout_marginTop="12dp"
+            android:textAllCaps="false"
+            android:background="@drawable/contentig"
+            android:text="@string/sccpwt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10">
 
-        <LinearLayout
+        </Button>
+
+        <Button
+            android:id="@+id/Stematel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAllCaps="false"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="12dp"
+            android:padding="10dp"
+            android:textColor="#06956D"
+            android:background="@drawable/contentig"
+            android:text="@string/stematelpwt"
+            app:layout_constraintStart_toEndOf="@+id/sccpwt"
+            app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto"
+            android:text="Our Team"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sccpwt" />
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="24dp"
+            android:background="@color/colorbgPeraturan"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:id="@+id/rafiud"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/circleImageView25"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/masfiud"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView55"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="25dp"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView25"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="@string/rayhan_rafiud_darojat" />
-
-                <TextView
-                    android:id="@+id/textView65"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="8dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView25"
-                    app:layout_constraintTop_toBottomOf="@+id/textView55"
-                    android:text="Backend Dev &amp; UI/UX Designer" />
-
-                <View
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="#000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:id="@+id/ramadhani"
-                android:layout_height="match_parent">
+                    android:id="@+id/rafiud"
+                    android:layout_height="match_parent">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/circleImageView26"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/gawang"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView25"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
 
-                <TextView
-                    android:id="@+id/textView56"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="25dp"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView26"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="R. Samudra Gawang" />
+                        android:src="@drawable/masfiud"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView66"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="8dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView26"
-                    app:layout_constraintTop_toBottomOf="@+id/textView56"
-                    android:text="Android Dev &amp; Frontend Dev" />
+                    <TextView
+                        android:id="@+id/textView55"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="25dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView25"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="@string/rayhan_rafiud_darojat" />
 
-                <View
+                    <TextView
+                        android:id="@+id/textView65"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+
+                        android:fontFamily="@font/roboto"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView25"
+                        app:layout_constraintTop_toBottomOf="@+id/textView55"
+                        android:text="Backend Developer &amp; UI/UX Designer" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="#000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:id="@+id/daffa_raihan"
-                android:layout_height="match_parent">
+                    android:id="@+id/ramadhani"
+                    android:layout_height="match_parent">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/circleImageView27"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/masdafa"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView26"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/gawang"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView57"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="25dp"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView27"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="Daffa Raihan Zaki" />
+                    <TextView
+                        android:id="@+id/textView56"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="25dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/roboto"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView26"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="R. Samudra Gawang" />
 
-                <TextView
-                    android:id="@+id/textView67"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="8dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView27"
-                    app:layout_constraintTop_toBottomOf="@+id/textView57"
-                    android:text="Frontend Dev" />
+                    <TextView
+                        android:id="@+id/textView66"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
 
-                <View
+                        android:fontFamily="@font/roboto"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView26"
+                        app:layout_constraintTop_toBottomOf="@+id/textView56"
+                        android:text="Android Developer &amp; Frontend Developer" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="#000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:id="@+id/fakhrul"
-                android:layout_height="match_parent">
+                    android:id="@+id/daffa_raihan"
+                    android:layout_height="match_parent">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/circleImageView28"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/fakhrul"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView27"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/masdafa"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView58"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="25dp"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView28"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text=" Fakhrul Zakaria" />
+                    <TextView
+                        android:id="@+id/textView57"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="25dp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView27"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Daffa Raihan Zaki" />
 
-                <TextView
-                    android:id="@+id/textView68"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="8dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView28"
-                    app:layout_constraintTop_toBottomOf="@+id/textView58"
-                    android:text="Frontend Dev" />
+                    <TextView
+                        android:id="@+id/textView67"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:fontFamily="@font/roboto"
 
-                <View
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView27"
+                        app:layout_constraintTop_toBottomOf="@+id/textView57"
+                        android:text="Frontend Developer" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="#000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:id="@+id/fakhrul"
+                    android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:id="@+id/faresa"
-                android:layout_height="match_parent">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView28"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/fakhrul"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/circleImageView2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/faresa"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/textView58"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="25dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/roboto"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView28"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Fakhrul Zakaria" />
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="25dp"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="Faresa Prasetyo N" />
+                    <TextView
+                        android:id="@+id/textView68"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="8dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView2"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5"
-                    android:text="Android Dev" />
+                        android:fontFamily="@font/roboto"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView28"
+                        app:layout_constraintTop_toBottomOf="@+id/textView58"
+                        android:text="Frontend Developer" />
 
-                <View
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="#000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:id="@+id/sindi"
-                android:layout_height="match_parent">
+                    android:id="@+id/faresa"
+                    android:layout_height="match_parent">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/circleImageView281"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/sindi"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/faresa"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView581"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="25dp"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView281"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="Sindy Lailasari" />
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="25dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/roboto"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Faresa Prasetyo N" />
 
-                <TextView
-                    android:id="@+id/textView681"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="8dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView281"
-                    app:layout_constraintTop_toBottomOf="@+id/textView581"
-                    android:text="Ilustrator" />
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:layout_marginLeft="12dp"
 
-                <View
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView2"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5"
+                        android:text="Android Developer" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="#000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:id="@+id/makhali"
-                android:layout_height="match_parent">
+                    android:id="@+id/sindi"
+                    android:layout_height="match_parent">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/circleImageView22"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/bagas"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView281"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/sindi"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView52"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="25dp"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView22"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="Makhali Bagas" />
+                    <TextView
+                        android:id="@+id/textView581"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="25dp"
+                        android:textColor="#000000"  android:fontFamily="@font/roboto"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView281"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Sindy Lailasari" />
 
-                <TextView
-                    android:id="@+id/textView62"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="8dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView22"
-                    app:layout_constraintTop_toBottomOf="@+id/textView52"
-                    android:text="Android Dev" />
+                    <TextView
+                        android:id="@+id/textView681"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
 
-                <View
+                        android:fontFamily="@font/roboto"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView281"
+                        app:layout_constraintTop_toBottomOf="@+id/textView581"
+                        android:text="Ilustrator" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="#000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:id="@+id/makhali"
+                    android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:id="@+id/yudhan"
-                android:layout_height="match_parent">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView22"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/bagas"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/circleImageView23"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/yudhan"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/textView52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="25dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/roboto"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView22"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Makhali Bagas" />
 
-                <TextView
-                    android:id="@+id/textView53"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="25dp"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView23"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="Yudhan Ganteng" />
+                    <TextView
+                        android:id="@+id/textView62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
 
-                <TextView
-                    android:id="@+id/textView63"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="8dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView23"
-                    app:layout_constraintTop_toBottomOf="@+id/textView53"
-                    android:text="Android Dev" />
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView22"
+                        app:layout_constraintTop_toBottomOf="@+id/textView52"
+                        android:text="Android Developer" />
 
-                <View
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="#000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:id="@+id/yudhan"
+                    android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:id="@+id/daffa_pradipta"
-                android:layout_height="match_parent">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView23"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/yudhan"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/circleImageView24"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/dafa"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/textView53"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView23"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Yudhan Jeffri D" />
 
-                <TextView
-                    android:id="@+id/textView54"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="25dp"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView24"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="Daffa Pradipta" />
+                    <TextView
+                        android:id="@+id/textView63"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
 
-                <TextView
-                    android:id="@+id/textView64"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="8dp"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/circleImageView24"
-                    app:layout_constraintTop_toBottomOf="@+id/textView54"
-                    android:text="Android Dev"/>
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView23"
+                        app:layout_constraintTop_toBottomOf="@+id/textView53"
+                        android:text="Android Developer" />
 
-                <View
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="#000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+                    android:id="@+id/daffa_pradipta"
+                    android:layout_height="match_parent">
 
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView24"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/dafa"
 
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView54"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="25dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/roboto"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView24"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Daffa Pradipa" />
+
+                    <TextView
+                        android:id="@+id/textView64"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto"
+                        app:layout_constraintStart_toEndOf="@+id/circleImageView24"
+                        app:layout_constraintTop_toBottomOf="@+id/textView54"
+                        android:text="Android Developer"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

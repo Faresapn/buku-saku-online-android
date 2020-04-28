@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.faltenreich.skeletonlayout.Skeleton;
 import com.scc.bukusakuonline.user.R;
 import com.scc.bukusakuonline.user.adapter.AdapterSiswa;
 
@@ -26,7 +27,7 @@ public class SearchActivity extends AppCompatActivity {
     AdapterSiswa adapterSiswa;
     SearchViewModel searchViewModel;
     AlertDialog alertDialog;
-
+    Skeleton skeletonScreen;
     String nis;
 
     @Override
@@ -42,6 +43,8 @@ public class SearchActivity extends AppCompatActivity {
 
     private void init() {
         nis = getIntent().getStringExtra("nis");
+        adapterSiswa = new AdapterSiswa(this);
+        recyclerView.setAdapter(adapterSiswa);
         alertDialog = new SpotsDialog.Builder().setContext(this).build();
         alertDialog.show();
         searchViewModel = ViewModelProviders.of(this).get(SearchViewModel.class);
@@ -50,8 +53,7 @@ public class SearchActivity extends AppCompatActivity {
             alertDialog.hide();
             recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
             if (siswaKelasItems.size() > 0) {
-                adapterSiswa = new AdapterSiswa(this, siswaKelasItems);
-                recyclerView.setAdapter(adapterSiswa);
+                adapterSiswa.setId(siswaKelasItems);
                 adapterSiswa.notifyDataSetChanged();
             } else {
                 Toast.makeText(this, "Siswa Tidak Ditemukan", Toast.LENGTH_SHORT).show();

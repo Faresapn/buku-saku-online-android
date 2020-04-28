@@ -1,99 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     android:paddingTop="32dp"
     android:paddingRight="20dp"
     android:paddingLeft="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorbgPeraturan"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout
-        android:orientation="vertical"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:textStyle="bold"
-            android:textSize="16sp"
-            app:fontFamily="@font/roboto"
-            android:text="@string/overview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <com.google.android.material.card.MaterialCardView
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="16dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp">
-            <LinearLayout
-             android:layout_margin="12dp"
-                android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overview"
+                android:textColor="@color/colorHitam"
+                android:textSize="16sp"
+                app:fontFamily="@font/roboto" />
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:textSize="12sp"
-                    app:fontFamily="@font/roboto"
-                    android:text="@string/jumlah_pelanggar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="5dp">
 
-                <TextView
-                    android:id="@+id/JumlahPelanggar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="22dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="16dp">
 
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/roboto"
-                    tools:text="52" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-        <com.google.android.material.card.MaterialCardView
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="100dp">
-            <LinearLayout
-                android:layout_margin="12dp"
-                android:orientation="vertical"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jumlah_pelanggar"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorHitam"
+                        app:fontFamily="@font/roboto" />
+
+                    <TextView
+                        android:id="@+id/JumlahPelanggar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/roboto"
+                        tools:text="52" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:textSize="12sp"
-                    app:fontFamily="@font/roboto"
-                    android:text="@string/jumlah_siswa"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="5dp">
 
-                <TextView
-                    android:id="@+id/JumlahSiswa"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/roboto"
-                    tools:text="52" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-        <TextView
-            android:layout_marginTop="24dp"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            app:fontFamily="@font/roboto"
-            android:text="@string/pelanggaran_paling_sering"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <androidx.recyclerview.widget.RecyclerView
-            tools:listitem="@layout/item_dashboard"
-            android:id="@+id/dashboard_items"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="100dp" />
-    </LinearLayout>
-</ScrollView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="22dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jumlah_siswa"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorHitam"
+                        app:fontFamily="@font/roboto" />
+
+                    <TextView
+                        android:id="@+id/JumlahSiswa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/roboto"
+                        tools:text="52" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/pelanggaran_paling_sering"
+                android:textColor="#29291E"
+                android:textSize="16sp"
+                app:fontFamily="@font/roboto" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dashboard_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_dashboard"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

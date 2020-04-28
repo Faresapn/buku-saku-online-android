@@ -21,27 +21,28 @@
             android:layout_height="match_parent">
             <LinearLayout
                 android:id="@+id/linearLayout3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:gravity="center_vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/bab"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginLeft="32dp"
                     android:layout_marginTop="24dp"
                     android:fontFamily="@font/robotoregular"
-                    tools:text="BAB 1"
+                    android:text="BAB 1"
                     android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/desc_bab"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:maxWidth="200dp"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
@@ -49,10 +50,10 @@
                     android:layout_marginLeft="32dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="24dp"
-                    android:fontFamily="@font/roboto"
-                    tools:text="Ketentuan Umum"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Ketentuan Umum"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/text_color"/>
             </LinearLayout>
 
             <ImageView

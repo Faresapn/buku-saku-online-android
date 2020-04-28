@@ -28,8 +28,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -115,18 +118,34 @@ public class PengaduanFragment extends Fragment implements MaterialSpinner.OnIte
     @OnClick(R.id.imageButton3)
     void onImageButton3Clicked() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            ActivityCompat.requestPermissions(Objects.requireNonNull(getActivity()), new String[] {Manifest.permission.CAMERA}, 10);
-            popImageChooser();
-
+            if (checkPermission()){
+                popImageChooser();
+            }
         }else {
             popImageChooser();
 
         }
-
+    }
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    private boolean checkPermission(){
+        int result;
+        String[] permissions= new String[]{Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE};
+        List<String> listPermissionsNeeded = new ArrayList<>();
+        for (String p:permissions) {
+            result = ContextCompat.checkSelfPermission(getActivity(),p);
+            if (result != PackageManager.PERMISSION_GRANTED) {
+                listPermissionsNeeded.add(p);
+            }
+        }
+        if (!listPermissionsNeeded.isEmpty()) {
+            ActivityCompat.requestPermissions(getActivity(), listPermissionsNeeded.toArray(new String[listPermissionsNeeded.size()]),10 );
+            return false;
+        }
+        return true;
     }
     //choose image
     @SuppressLint("IntentReset")
-    private void popImageChooser(){
+    public void popImageChooser(){
         final List<Intent> cameraIntents = new ArrayList<>();
         final Intent captureIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
         final PackageManager packageManager = Objects.requireNonNull(getActivity()).getPackageManager();
@@ -198,6 +217,8 @@ public class PengaduanFragment extends Fragment implements MaterialSpinner.OnIte
                     }
                 }catch (Exception e){
                     e.printStackTrace();
+                    Toast.makeText(getContext(), "Error Permission", Toast.LENGTH_SHORT).show();
+
                 }
             }
         }else{
@@ -280,4 +301,7 @@ public class PengaduanFragment extends Fragment implements MaterialSpinner.OnIte
             spinnerViolation.setOnItemSelectedListener((MaterialSpinner.OnItemSelectedListener<String>) (v, p, p02, violation) -> category = violation);
         });
     }
+    //permission
+
+
 }

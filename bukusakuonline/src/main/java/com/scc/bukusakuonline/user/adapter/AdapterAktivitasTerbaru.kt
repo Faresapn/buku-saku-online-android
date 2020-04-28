@@ -36,13 +36,14 @@ class AdapterAktivitasTerbaru(private  val context: Context, private val Items:L
         private val name = itemView.findViewById<TextView>(R.id.name_history)
         private val date = itemView.findViewById<TextView>(R.id.date_history)
         private val desc = itemView.findViewById<TextView>(R.id.desc_history)
+        private val lihat = itemView.findViewById<TextView>(R.id.lihat)
 
         @SuppressLint("SetTextI18n")
         fun bindItem(items: DataItem, context: Context){
             point.text = items.pelanggaran.point.toString()
             name.text = items.user.nama
             date.text = items.createdDate.toString()
-
+            lihat.text = "Lihat Detail"
             desc.text = "Kode : ${items.pelanggaran.kode}"
             itemView.setOnClickListener {
                 val intent = Intent(context, DetailPelanggaran::class.java)

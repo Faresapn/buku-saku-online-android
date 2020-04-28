@@ -53,7 +53,6 @@ public class ProfileFragment extends Fragment {
         try {
             profileViewModel.loadData(Objects.requireNonNull(getContext()));
             profileViewModel.getListData().observe(getViewLifecycleOwner(), userItems -> {
-
                 try{
                     String url =  Objects.requireNonNull(userItems.getPhoto());
                     Picasso.get().load(url).into(imageView);
@@ -63,11 +62,9 @@ public class ProfileFragment extends Fragment {
                     phone.setText(userItems.getPhone());
                     kelas.setText(userItems.getKelas());
 
-                }catch (Exception e){
-                    Toast.makeText(getContext(), "Gagal Ambil Data", Toast.LENGTH_SHORT).show();
+                }catch (Exception e) {
+                    Toast.makeText(getContext(), "Harap Login Ulang Terlebih Dahulu", Toast.LENGTH_SHORT).show();
                 }
-
-
             });
         }catch (Exception e){
             Toast.makeText(getContext(),"Harap Login Ulang Terlebih Dahulu" , Toast.LENGTH_LONG).show();
@@ -80,5 +77,6 @@ public class ProfileFragment extends Fragment {
         editor.remove("TOKEN");
         editor.apply();
         startActivity(new Intent(getActivity(), LoginActivity.class));
+        getActivity().finish();
     }
 }

@@ -10,8 +10,9 @@
     <string name="masuk_untuk_melanjutkan">Masuk Untuk Melanjutkan</string>
     <string name="history">History</string>
     <string name="dashboard">Dashboard</string>
-    <string name="sccpwt">sccpwt</string>
-    <string name="stematelpwt">stematelpwt</string>
+    <string name="sccpwt">\@sccpwt</string>
+
+    <string name="stematelpwt">\@stematelpwt</string>
     <string name="profile">Profile</string>
     <string name="searchsiswa">Search Siswa</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -117,6 +118,6 @@
     <string name="igfaresa" translatable="false" tools:ignore="ExtraTranslation">https://www.instagram.com/faresa_pn/</string>
     <string name="igsindi" translatable="false" tools:ignore="ExtraTranslation">https://www.instagram.com/sindylail/</string>
     <string name="igyudhan" translatable="false" tools:ignore="ExtraTranslation">https://www.instagram.com/yudhan.jeffri/</string>
-    <string name="igbagas" translatable="false" tools:ignore="ExtraTranslation">https://www.instagram.com/bagas_makhali/</string>
+    <string name="igbagas" translatable="false" tools:ignore="ExtraTranslation">https://www.instagram.com/makhalibagas/</string>
     <string name="igdafa" translatable="false" tools:ignore="ExtraTranslation">https://www.instagram.com/dafaaaap/</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.scc.bukusakuonline.user.ui.profile
 
 import android.content.Context
+import android.util.Log
 import android.util.Log.d
 import android.widget.Toast
 import androidx.lifecycle.LiveData
@@ -24,6 +25,7 @@ class ProfileViewModel : ViewModel() {
         d("viewmodel", "viewmodel")
         val sharedPreferences = context.getSharedPreferences("PREF", Context.MODE_PRIVATE)
         val token ="Bearer "+ sharedPreferences.getString("TOKEN","abc")
+        d("token",token);
         RetroConfig.getRetrofit().create(ApiService::class.java).profile(token).enqueue(object : retrofit2.Callback<UserResponse>{
             override fun onFailure(call: Call<UserResponse>, t: Throwable) {
 
@@ -33,6 +35,7 @@ class ProfileViewModel : ViewModel() {
 
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                 try {
+                    d("viewmodel",response?.body().toString());
                     response.body()?.data.let {
                         listPoint.postValue(it)
                     }

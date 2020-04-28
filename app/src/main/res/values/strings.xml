@@ -88,8 +88,8 @@
     <string name="searchsiswa">Search Siswa</string>
     <string name="foto_profile">Foto Profile</string>
     <string name="pilih_pelanggaran">Pilih Pelanggaran</string>
-    <string name="sccpwt">sccpwt</string>
-    <string name="stematelpwt">stematelpwt</string>
+    <string name="sccpwt">\@sccpwt</string>
+    <string name="stematelpwt">\@stematelpwt</string>
     <string-array name="RPL">
         <item>X RPL 1</item>
         <item>X RPL 1</item>
@@ -161,7 +161,7 @@
     <string name="igfaresa" translatable="false">https://www.instagram.com/faresa_pn/</string>
     <string name="igsindi" translatable="false">https://www.instagram.com/sindylail/</string>
     <string name="igyudhan" translatable="false">https://www.instagram.com/yudhan.jeffri/</string>
-    <string name="igbagas" translatable="false">https://www.instagram.com/bagas_makhali/</string>
+    <string name="igbagas" translatable="false">https://www.instagram.com/makhalibagas/</string>
     <string name="igdafa" translatable="false">https://www.instagram.com/dafaaaap/</string>
 
 </resources>

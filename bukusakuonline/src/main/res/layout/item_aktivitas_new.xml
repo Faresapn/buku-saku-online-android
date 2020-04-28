@@ -24,7 +24,7 @@
                 android:layout_gravity="center"
                 tools:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:text="@string/_1"
+                tools:text="@string/_1"
                 android:textAlignment="center"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
@@ -67,9 +67,10 @@
                     android:maxLength="11"
                     tools:text="Kode : A-01"/>
                 <TextView
+                    android:id="@+id/lihat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/lihat_detail"
+                    tools:text="@string/lihat_detail"
                     android:textStyle="bold"
                     tools:fontFamily="@font/roboto"
                     android:textSize="12sp"

@@ -2,6 +2,7 @@ package com.scc.bukusakuonline.user.ui.daftarkelas
 
 import android.os.Bundle
 import android.util.Log
+import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.scc.bukusakuonline.user.adapter.AdapterSiswa
 
 import android.widget.AdapterView.OnItemSelectedListener
+import com.faltenreich.skeletonlayout.Skeleton
+import com.faltenreich.skeletonlayout.applySkeleton
 import com.scc.bukusakuonline.user.R
 
 import java.util.ArrayList
@@ -34,12 +37,18 @@ class TjaFragment : Fragment(), OnItemSelectedListener {
     lateinit var rv_rpl : RecyclerView
     lateinit var adapter: ArrayAdapter<String>
     lateinit var spinner: Spinner
+    lateinit var skeletonScreen: Skeleton
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? { // Inflate the layout for this fragment
         val v = inflater.inflate(R.layout.fragment_tja, container, false)
         spinner = v.findViewById<Spinner>(R.id.spinner_tja)
         rv_rpl= v.findViewById(R.id.rv_tja)
         rv_rpl.layoutManager= LinearLayoutManager(context)
+        siswaAdapter = context?.let { AdapterSiswa(it) }!!
+        rv_rpl.adapter = siswaAdapter
+        skeletonScreen= rv_rpl.applySkeleton(R.layout.item_siswa,5)
+        skeletonScreen.showSkeleton()
         init()
         return v
     }
@@ -68,10 +77,12 @@ class TjaFragment : Fragment(), OnItemSelectedListener {
         siswaViewModel = ViewModelProviders.of(this).get(SiswaViewModel::class.java)
         context?.let { siswaViewModel.loadData(it,p0?.getItemAtPosition(p2).toString()) }
         siswaViewModel.listData.observe(this, Observer {
-            Log.d("it", it.toString())
-            siswaAdapter = context?.let { it1 -> AdapterSiswa(it1,it) }!!
-            rv_rpl.adapter = siswaAdapter
+            d("it",it.toString())
+            siswaAdapter.setId(it)
             siswaAdapter.notifyDataSetChanged()
-        })    }
+            skeletonScreen.showOriginal()
+
+        })
+    }
 
 }

@@ -33,7 +33,7 @@ public interface ApiService {
     Call<DetailPointResponse> getDetailPoint(@Header("Authorization") String Auth);
     //login / users
     @FormUrlEncoded
-    @POST("api/users/admin/login")
+    @POST("api/users/login")
     Call<Login> login(@Field("email") String email, @Field("password") String password, @Field("secretCode") String secret);
     @GET("api/users/search")
     Call<SiswaKelasResponse> searchSiswa(@Header("Authorization") String Auth, @Query("nis") String nis);

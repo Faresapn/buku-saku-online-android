@@ -1,11 +1,13 @@
 package com.scc.bukusakuonline.user.connection;
 
 
+import com.scc.bukusakuonline.user.BuildConfig;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroConfig {
-    private static final String BASE_URL = "http://3.91.42.49/";
+    private static final String BASE_URL = BuildConfig.BASE_URL;
     private static Retrofit retrofit;
     public static Retrofit getRetrofit(){
         if (retrofit == null){

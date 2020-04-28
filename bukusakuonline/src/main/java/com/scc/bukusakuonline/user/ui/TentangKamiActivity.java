@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 
 
@@ -34,86 +33,53 @@ public class TentangKamiActivity extends AppCompatActivity {
         yudhan = findViewById(R.id.yudhan);
         dafa = findViewById(R.id.daffa_pradipta);
         bagas = findViewById(R.id.makhali);
-        scc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igscc)));
-                startActivity(intent);
-            }
+        scc.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igscc)));
+            startActivity(intent);
         });
-        stematel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igstematel)));
-                startActivity(intent);
-            }
+        stematel.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igstematel)));
+            startActivity(intent);
         });
-        fiud.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igrafiud)));
-                startActivity(intent);
-            }
+        fiud.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igrafiud)));
+            startActivity(intent);
         });
-        gawang.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.iggawang)));
-                startActivity(intent);
-            }
+        gawang.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.iggawang)));
+            startActivity(intent);
         });
-        fakhrul.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igfakhrul)));
-                startActivity(intent);
-            }
+        fakhrul.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igfakhrul)));
+            startActivity(intent);
         });
-        sindi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igsindi)));
-                startActivity(intent);
-            }
+        sindi.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igsindi)));
+            startActivity(intent);
         });
-        faresa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igfaresa)));
-                startActivity(intent);
-            }
+        faresa.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igfaresa)));
+            startActivity(intent);
         });
-        daffa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igdafarz)));
-                startActivity(intent);
-            }
+        daffa.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igdafarz)));
+            startActivity(intent);
         });
-        dafa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igdafa)));
-                startActivity(intent);
-            }
+        dafa.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igdafa)));
+            startActivity(intent);
         });
-        yudhan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igyudhan)));
-                startActivity(intent);
-            }
+        yudhan.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igyudhan)));
+            startActivity(intent);
         });
-        bagas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igbagas)));
-                startActivity(intent);
-            }
+        bagas.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.igbagas)));
+            startActivity(intent);
         });
 
-        Objects.requireNonNull(getSupportActionBar()).setTitle(getString(R.string.detail_4));
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        (getSupportActionBar()).setTitle(getString(R.string.detail_4));
+        (getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
     @Override
