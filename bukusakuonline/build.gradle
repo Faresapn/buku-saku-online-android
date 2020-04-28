@@ -68,6 +68,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
     implementation "com.github.d-max:spots-dialog:1.1@aar"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.google.android.gms:play-services-ads:19.1.0'
 }
 repositories {
     mavenCentral()
